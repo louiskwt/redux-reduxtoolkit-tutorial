@@ -5,12 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import userReducer from './features/user';
+import themeReducer from './features/theme';
 
 // A container for state
 const store = configureStore({
 	// A function that takes in the state and action to update / change the state
 	reducer: {
-		user: userReducer
+		user: userReducer,
+		theme: themeReducer
 	}
 });
 
